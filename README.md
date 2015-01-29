@@ -32,6 +32,12 @@ Do prehliadaca vlozte http://127.0.0.1:84/
 - `GET http://127.0.0.1:8182/dokument/{uuid}/data` - vrati samotne data prace
 - `GET http://127.0.0.1:8182/dokument/{uuid}/{prah}` - vrati zoznam prac ktore su podobne s aktualnou ak podobnost je vyzsia ako zadany prah
 
+#### Responses
+Kazda odpoved je vo formate json `{status: 200, text: "", data: ""}`
+- *status* - 200 ak je vsetko v poriadku, v pripade chyby 404
+- *text* - obsahuje informacie o chybe
+- *data* - obsahuje data ktore sme od servera dopytovali
+
 (c) 2015 Patrik Pekarčík
 
 ## Zadanie

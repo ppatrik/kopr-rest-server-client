@@ -30,7 +30,7 @@ body {
     clear: both;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 769px) {
     .col-3 {
         margin-bottom: 15px;
     }
@@ -40,7 +40,7 @@ body {
     }
 }
 
-@media (min-width: 500px) {
+@media (min-width: 769px) {
     .col-3 {
         float: left;
         width: 25%;
