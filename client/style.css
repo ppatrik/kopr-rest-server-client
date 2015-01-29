@@ -41,9 +41,9 @@ body {
 }
 
 @media (min-width: 769px) {
-    .col-3 {
+    .col-6 {
         float: left;
-        width: 25%;
+        width: 50%;
         padding: 15px;
     }
 

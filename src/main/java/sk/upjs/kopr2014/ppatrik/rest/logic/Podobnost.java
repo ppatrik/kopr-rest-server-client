@@ -1,5 +1,6 @@
 package sk.upjs.kopr2014.ppatrik.rest.logic;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -33,9 +34,21 @@ public class Podobnost {
         this.podobnost = podobnost;
     }
 
-    public static List<Podobnost> get(Dokument input, int limit, List<Dokument> korpus) {
+    public static List<Podobnost> get(Dokument input, int limit, List<Dokument> korpus) throws IOException {
         List<Podobnost> l = new ArrayList<Podobnost>();
-        l.add(new Podobnost(input.getUuid(), limit));
+        //for (int i = 0; i < korpus.size(); i++) {
+        String a = input.readData();
+        for (int j = 0; j < korpus.size(); j++) {
+            Dokument output = korpus.get(j);
+            if (!output.getUuid().equals(input.getUuid())) {
+                String b = korpus.get(j).readData();
+                int podobnost = (int) (StringSimilarity.similarity(a, b) * 100);
+                if (podobnost >= limit) {
+                    l.add(new Podobnost(korpus.get(j).getUuid(), podobnost));
+                }
+            }
+        }
+        //}
         return l;
     }
 }
