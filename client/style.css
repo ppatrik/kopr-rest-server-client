@@ -1,0 +1,167 @@
+*:before, *:after {
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+}
+
+.row:before, .row:after {
+    display: table;
+    content: " ";
+}
+
+.row {
+    margin-bottom: 6px;
+    padding-right: -15px;
+    padding-left: -15px;
+}
+
+.row:last-child {
+    margin-bottom: 0px;
+}
+
+.row:after {
+    clear: both;
+}
+
+@media (max-width: 500px) {
+    .col-3 {
+        margin-bottom: 15px;
+    }
+
+    .col-12 {
+        margin-bottom: 15px;
+    }
+}
+
+@media (min-width: 500px) {
+    .col-3 {
+        float: left;
+        width: 25%;
+        padding: 15px;
+    }
+
+    .col-12 {
+        float: left;
+        width: 100%;
+        padding: 15px;
+    }
+}
+
+.row > label {
+    float: left;
+    width: 25%;
+    display: table;
+}
+
+.row > input, .row > textarea {
+    width: 75%;
+}
+
+.row button {
+    float: right;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    /*border: 1px solid #a9a9a9; */
+}
+
+table td {
+    border: 1px solid #a9a9a9;
+    padding: 4px;
+}
+
+body {
+    background: #efefef;
+}
+
+fieldset {
+    background: #fefefe;
+    border: 1px solid #848484;
+    box-shadow: 1px 1px 1px silver;
+    border-radius: 2px;
+}
+
+fieldset legend {
+    background: #fefefe;
+    border: 1px solid #848484;
+    box-shadow: 1px 1px 1px black;
+    font-weight: bold;
+    padding: 3px;
+}
+
+.status {
+    margin-bottom: 6px;
+    width: 100%;
+    display: table;
+}
+
+.status .error {
+    display: table;
+    border: 1px dashed #800;
+    color: #800;
+    background: #ffbfbf;
+    width: 100%;
+    padding: 3px;
+    text-align: center;
+}
+
+.status .ok {
+    display: table;
+    border: 1px dashed #080;
+    color: #080;
+    background: #bfffbf;
+    width: 100%;
+    padding: 3px;
+    text-align: center;
+}
+
+.status .loading {
+    display: table;
+    border: 1px dashed #008;
+    color: #008;
+    background: #bfbfff;
+    width: 100%;
+    padding: 3px;
+    text-align: center;
+}
+
+#getList legend {
+    padding-right: 16px;
+    background-image: url(arrow_refresh_small.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    cursor: pointer;
+}
+
+.podobnost, .meta, .data {
+    cursor: pointer;
+    display: block;
+    float: left;
+    background: url("fire.png");
+    width: 16px;
+    height: 16px;
+    text-indent: -99999px;
+    margin-right: 6px;
+}
+
+.meta {
+    background-image: url("eye.png");
+}
+
+.data {
+    background-image: url("document_editing.png");
+}
+
+.footer {
+    color: #9b9b9b;
+    text-align: center;
+}
